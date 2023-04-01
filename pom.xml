@@ -52,6 +52,9 @@
           <reportPlugins>
             <plugin>
               <artifactId>maven-checkstyle-plugin</artifactId>
+              <configuration>
+                  <headerLocation>${project.basedir}/LICENSE.txt</headerLocation>
+              </configuration>
             </plugin>
 
             <plugin>
