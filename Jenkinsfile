@@ -7,12 +7,12 @@ pipeline{
   stages{
     stage('Build'){
       steps{
-        sh 'mvn clean package'
+        bat 'mvn clean package'
       }
       post{
 	success{
 	  echo 'Now Archiving...開始存檔...'
-	  archiveArtifacts artifacts: '**/target/*.war'
+	  archiveArtifacts artifacts: '**\\target\\*.war'
 	}
       }
     }
